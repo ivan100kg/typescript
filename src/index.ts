@@ -59,4 +59,30 @@ class Employee extends Person {
     }
 }
 
+interface A {
+    name: string;
+}
 
+interface B {
+    age: number;
+}
+
+// my types
+type myTypeAND = A & B;     // 
+type myTypeOR = A | B;
+
+let Igor: myTypeAND = {name: 'Igor', age: 49};
+let Inna: myTypeOR = {name: 'Inna'};
+let Egor: myTypeOR = {age: 45};
+let Lilu: myTypeOR = {name: 'Lilu', age: 19};
+
+// primitive
+type xz = string | number;
+let myVar1: xz = 12;
+let myVar2: xz = '12';
+
+let hui = 'hui';
+typeof hui === 'string';
+Igor instanceof Employee;
+
+let a = <number><unknown>'12';
